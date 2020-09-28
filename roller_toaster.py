@@ -1,4 +1,4 @@
-import discord
+import discord, json
 from discord.ext import commands
 
 def get_prefix(bot, message):
@@ -23,6 +23,10 @@ if __name__ == '__main__':
     for extension in initial_extensions:
         bot.load_extension(extension)
 
+    with open('config.json') as f: # Load the config as f
+        config = json.load(f) # Read the config out
+
+
 @bot.event
 async def on_ready():
     # Runs when ready
@@ -33,4 +37,4 @@ async def on_ready():
     print(f'Successfully logged in and booted...!')
 
 
-bot.run('NTg4Nzc2MTUyNDcxMDQ0MTA2.XQKChQ.euy5JoX9tTMdNHtRfHRqENuDdNY', bot=True, reconnect=True)
+bot.run(config.get('token', None), bot=True, reconnect=True) # Start the bot using the token from dict config
