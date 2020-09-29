@@ -1,4 +1,4 @@
-import discord, json
+import discord, json, os
 from discord.ext import commands
 
 def get_prefix(bot, message):
@@ -24,7 +24,7 @@ if __name__ == '__main__':
     for extension in initial_extensions:
         bot.load_extension(extension)
 
-    with open('config.json') as f: # Load the config as f
+    with open(os.getcwd() + 'config.json') as f: # Load the config as f
         config = json.load(f) # Read the config out
 
 
