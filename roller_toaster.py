@@ -14,7 +14,8 @@ def get_prefix(bot, message):
 
 # Extensions (commands a user can excecute basicly)
 initial_extensions = ['cogs.coinflip',
-                      'cogs.subteam']
+                      'cogs.subteam', 
+                      'cogs.rolling']
 
 bot = commands.Bot(command_prefix=get_prefix, description='A Robot')
 
@@ -35,6 +36,9 @@ async def on_ready():
 
     await bot.change_presence(activity=discord.Game(name="Playing nothing"))
     print(f'Successfully logged in and booted...!')
+
+    
+
 
 
 bot.run(config.get('token', None), bot=True, reconnect=True) # Start the bot using the token from dict config
