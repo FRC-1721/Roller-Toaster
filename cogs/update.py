@@ -18,6 +18,8 @@ class Update(commands.Cog):
         if role in ctx.author.roles:
             await ctx.send("Updating bot.")
             await ctx.send(self.git_update())
+            await self.bot.close()
+            exit()
         else:
             await ctx.send("{} is not an admin. You must be an admin to update the bot remotely.".format(ctx.author.name))
 
