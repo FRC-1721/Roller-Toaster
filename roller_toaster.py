@@ -15,7 +15,6 @@ def get_prefix(bot, message):
 # Extensions (commands a user can excecute basicly)
 initial_extensions = ['cogs.coinflip', 
                       'cogs.rolling',
-                      'cogs.subteam',
                       'cogs.update']
 
 bot = commands.Bot(command_prefix=get_prefix, description='A Robot')
