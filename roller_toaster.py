@@ -16,9 +16,11 @@ def get_prefix(bot, message):
 initial_extensions = ['cogs.coinflip', 
                       'cogs.rolling',
                       'cogs.subteam',
-                      'cogs.update']
+                      'cogs.update',
+                      'cogs.help']
 
 bot = commands.Bot(command_prefix=get_prefix, description='A Robot')
+bot.remove_command('help')
 
 # Load in each cog (game)
 if __name__ == '__main__':
@@ -45,3 +47,4 @@ async def on_ready():
 
 
 bot.run(config.get('token', None), bot=True, reconnect=True) # Start the bot using the token from dict config
+
