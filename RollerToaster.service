@@ -1,0 +1,15 @@
+[Unit]
+# Human readable name of the unit
+Description=Discord bot for Roles and such
+
+
+[Service]
+# Working dir
+WorkingDirectory=/RollerToaster
+
+# When to restart
+Restart=always
+RestartSec=5s
+
+# What to run
+ExecStart=/usr/bin/python3 /RollerToaster/roller_toaster.py
