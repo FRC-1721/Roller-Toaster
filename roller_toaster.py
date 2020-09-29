@@ -24,7 +24,7 @@ if __name__ == '__main__':
     for extension in initial_extensions:
         bot.load_extension(extension)
 
-    configpath = os.getcwd() + 'config.json'
+    configpath = os.getcwd() + '/config.json'
     print(configpath)
     with open(configpath) as f: # Load the config as f
         config = json.load(f) # Read the config out
