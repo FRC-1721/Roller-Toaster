@@ -1,14 +1,30 @@
 {
     "help" : {
-        "coinflip.py" :{
-            "alias": "flip",
-            "helptext" : "Flips a coin.",
+        "flip" : {
+            "alias" : "flip",
+            "helptext" : "Flips a coin and returns heads or tails.",
             "verbose" : "Flips a coin and returns heads or tails.\nTakes no arguments.\nWritten by Khan and Joe"
         },
-        "rolling.py" :{
+        "roll" : {
             "alias": "roll",
             "helptext" : "Docs needed.",
             "verbose" : "Docs needed\nWritten by Khan"
+        },
+        "help" : {
+            "alias" : "help",
+            "helptext" : "Prints out this help menu.",
+            "verbose" : "Prints out,  more docs\nWritten by Joe"
+        },
+        "update" : {
+            "alias" : "update",
+            "helptext" : "Updates the bot, pulling the latest from discord.",
+            "verbose" : "Pulls the latest from discord and updates the bot,  more docs\nWritten by Joe"
+        }
+    },
+    "rules" : {
+        "Headline" : "Welcome to the server! We're glad to have you on the team!",
+        "rules" : {
+            "Don't be a jerk." : "just dont, thanks"
         }
     }
 }
