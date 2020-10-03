@@ -42,9 +42,6 @@ async def on_ready():
     await bot.change_presence(activity=discord.Game(name="Playing nothing"))
     print(f'Successfully logged in and booted...!')
 
-    
-
-
 
 bot.run(config.get('token', None), bot=True, reconnect=True) # Start the bot using the token from dict config
 
