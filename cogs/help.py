@@ -10,7 +10,7 @@ class Help(commands.Cog):
     async def advanced_help(self, ctx, verbose = None): # Pass in self and ctx (data about what triggered this cog)
         author = ctx.message.author # Get the author of the command
 
-        helptextpath = os.getcwd() + '/helptext.json'
+        helptextpath = os.getcwd() + '/data/helptext.json'
         with open(helptextpath) as f: # Load the config as f
             helptext = json.load(f) # Read the config out
 
