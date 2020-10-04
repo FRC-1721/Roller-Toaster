@@ -39,7 +39,7 @@ async def on_ready():
 
     print(f'\n\nLogged in as: {bot.user.name} - {bot.user.id}\nVersion: {discord.__version__}\n')
 
-    await bot.change_presence(activity=discord.Game(name="Playing nothing"))
+    await bot.change_presence(activity=discord.Game(name="FIRST Robotics"))
     print(f'Successfully logged in and booted...!')
 
 
