@@ -5,7 +5,7 @@ Description=Discord bot for Roles and such
 
 [Service]
 # Working dir
-WorkingDirectory=/RollerToaster
+WorkingDirectory=/discord/Roller-Toaster
 
 # When to restart
 Restart=always
