@@ -14,8 +14,9 @@ class Update(commands.Cog):
 
     @commands.command(name='update') # This is a command, its name is flip
     async def update(self, ctx): # Pass in self and ctx (data about what triggered this cog)
-        role = discord.utils.find(lambda r: r.name == 'Discord Server Admin', ctx.guild.roles)
+        role = discord.utils.find(lambda r: r.name == 'Discord Server Admin', ctx.guild.roles) 
         if role in ctx.author.roles:
+            await self.bot.change_presence(activity=discord.Game(name="Updating Self...")) # Display updating self as current game
             await ctx.send("Updating bot.")
             await ctx.send(self.git_update())
             await self.bot.close()
