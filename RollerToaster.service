@@ -5,11 +5,15 @@ Description=Discord bot for Roles and such
 
 [Service]
 # Working dir
-WorkingDirectory=/RollerToaster
+WorkingDirectory=/discord/Roller-Toaster
 
 # When to restart
 Restart=always
 RestartSec=5s
 
 # What to run
-ExecStart=/usr/bin/python3 /RollerToaster/roller_toaster.py
+ExecStart=/usr/bin/python3 /discord/Roller-Toaster/roller_toaster.py
+
+[Install]
+# Not Sure what this is for but its needed
+WantedBy=multi-user.target
